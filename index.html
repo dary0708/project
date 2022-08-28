@@ -20,119 +20,132 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="card">
-      <form class="search-form" id="search-form">
-        <input
-          id="city-input"
-          type="text"
-          class="city"
-          placeholder="Enter a city"
-        />
-        <span class="searh">
-          <input id="search-button" type="submit" value="Search" required />
-          <input id="current-button" type="submit" value="Current" />
-        </span>
-      </form>
-      <div class="description-1">
-        <div>
-          <h1 id="city">
-            <strong></strong>
-          </h1>
-        </div>
-        <div id="date"></div>
-        <div id="description"></div>
-        <div class="row">
-          <div class="col sun"></div>
+    <div class="page">
+      <div class="card">
+        <form class="search-form" id="search-form">
+          <input
+            id="city-input"
+            type="text"
+            class="city"
+            placeholder="Enter a city"
+          />
+          <span class="searh">
+            <input id="search-button" type="submit" value="Search" required />
+            <input id="current-button" type="submit" value="Current" />
+          </span>
+        </form>
+        <div class="description-1">
+          <div>
+            <h1 id="city">
+              <strong></strong>
+            </h1>
+          </div>
+          <div id="date"></div>
+          <div id="description"></div>
           <div class="row">
-            <div class="col temperature">
-              <h2 class="degree">
-                <span>
-                  <span id="degree"><strong></strong></span>
-                  <span><strong>C°</strong></span>
-                </span>
-              </h2>
+            <div class="col sun"></div>
+            <div class="row">
+              <div class="col temperature">
+                <h2 class="degree">
+                  <span>
+                    <span id="degree"><strong></strong></span>
+                    <span><strong>C°</strong></span>
+                  </span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="description-2">
+            <div>
+              <p>
+                <span> Humidity: </span>
+                <span id="humidity"> </span>
+                <span>%</span>
+              </p>
+            </div>
+            <div>
+              <p>
+                <span>Wind:</span>
+                <span id="wind"></span>
+                <span>km/h</span>
+              </p>
+            </div>
+            <div>
+              <p>
+                <span>Air Pressure:</span>
+                <span id="pressure"></span>
+                <span> hPa</span>
+              </p>
+            </div>
+          </div>
+          <div class="days-of-the-week">
+            <div class="row">
+              <div class="col day-1">
+                <div>Thu</div>
+                <div class="forecast-icon">
+                  <img
+                    src="icons/sun-behind-clouds.png"
+                    alt="sun behind clouds "
+                    width="30px"
+                  />
+                </div>
+                <div>15°25°</div>
+              </div>
+              <div class="col day-2">
+                <div>Fri</div>
+                <div>
+                  <img
+                    class="forecast-icon"
+                    src="icons/sun-behind-clouds.png"
+                    alt="sun behind clouds"
+                    width="30px"
+                  />
+                </div>
+                <div>18°25°</div>
+              </div>
+              <div class="col day-3">
+                <div>Sat</div>
+                <div class="forecast-icon">
+                  <img
+                    src="icons/cloud-and-sun.png"
+                    alt="sun and clouds"
+                    width="30px"
+                  />
+                </div>
+                <div>18°27°</div>
+              </div>
+              <div class="col day-4">
+                <div>Sun</div>
+                <div class="forecast-icon">
+                  <img
+                    src="icons/cloud-and-sun.png"
+                    alt="sun and clouds"
+                    width="30"
+                  />
+                </div>
+                <div>19°25°</div>
+              </div>
+              <div class="col day-5">
+                <div>Mon</div>
+                <div class="forecast-icon">
+                  <img src="icons/rain.png" alt="rain" width="30px" />
+                </div>
+                <div>17°23°</div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="description-2">
-          <div>
-            <p>
-              <span> Humidity: </span>
-              <span id="humidity"> </span>
-              <span>%</span>
-            </p>
-          </div>
-          <div>
-            <p>
-              <span>Wind:</span>
-              <span id="wind"></span>
-              <span>km/h</span>
-            </p>
-          </div>
-          <div>
-            <p>
-              <span>Air Pressure:</span>
-              <span id="pressure"></span>
-              <span> hPa</span>
-            </p>
-          </div>
-        </div>
-        <div class="days-of-the-week">
-          <div class="row">
-            <div class="col day-1">
-              <div>Thu</div>
-              <div class="forecast-icon">
-                <img
-                  src="icons/sun-behind-clouds.png"
-                  alt="sun behind clouds "
-                  width="30px"
-                />
-              </div>
-              <div>15°25°</div>
-            </div>
-            <div class="col day-2">
-              <div>Fri</div>
-              <div>
-                <img
-                  class="forecast-icon"
-                  src="icons/sun-behind-clouds.png"
-                  alt="sun behind clouds"
-                  width="30px"
-                />
-              </div>
-              <div>18°25°</div>
-            </div>
-            <div class="col day-3">
-              <div>Sat</div>
-              <div class="forecast-icon">
-                <img
-                  src="icons/cloud-and-sun.png"
-                  alt="sun and clouds"
-                  width="30px"
-                />
-              </div>
-              <div>18°27°</div>
-            </div>
-            <div class="col day-4">
-              <div>Sun</div>
-              <div class="forecast-icon">
-                <img
-                  src="icons/cloud-and-sun.png"
-                  alt="sun and clouds"
-                  width="30"
-                />
-              </div>
-              <div>19°25°</div>
-            </div>
-            <div class="col day-5">
-              <div>Mon</div>
-              <div class="forecast-icon">
-                <img src="icons/rain.png" alt="rain" width="30px" />
-              </div>
-              <div>17°23°</div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div>
+        <p class="open-source">
+          <a
+            class="open-source-link"
+            href="https://github.com/dary0708/project"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Daria Subota
+        </p>
       </div>
     </div>
     <script src="script.js"></script>

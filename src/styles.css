@@ -101,3 +101,14 @@ body {
   display: block;
   margin: 0 auto;
 }
+.open-source {
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.open-source-link {
+  text-decoration: none;
+}
+.open-source-link:hover {
+  text-decoration: underline;
+}
